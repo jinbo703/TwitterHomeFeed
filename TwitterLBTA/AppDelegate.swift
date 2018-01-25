@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  TwitterLBTA
 //
-//  Created by PAC on 4/30/17.
-//  Copyright © 2017 PAC. All rights reserved.
+//  Created by John Nik on 4/30/17.
+//  Copyright © 2017 johnik703. All rights reserved.
 //
 
 import UIKit
@@ -16,6 +16,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        
+        
+//        let homeController = HomeController(collectionViewLayout: UICollectionViewFlowLayout())
+//        window?.rootViewController = UINavigationController(rootViewController: homeController)
+
+        window?.rootViewController = UINavigationController(rootViewController: HomeDatasourceController())
+        
         return true
     }
 
